@@ -1,3 +1,158 @@
+<!doctype html>
 <html>
+    <head>
+        <title>Creators Co-op</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="http://dfcb.github.io/BigVideo.js/css/bigvideo.css" rel="stylesheet" />
+        
+        <!-- <script src="js/main.js"></script> -->
+        <script src="js/jquery-1.7.2.min.js"> </script>
+        <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script src="js/jquery.imagesloaded.min.js"></script>
+        <script src="http://vjs.zencdn.net/4.0/video.js"></script>
+        <script src="js/bigvideo.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            (function($){
+                $.fn.extend({
+                    hcenter: function () {
+                        return this.each(function() {
+                            var left = ($(window).width() - $(this).outerWidth()) / 2;
+                            $(this).css({position:'absolute', margin:0, top: 0+'px', left: (left > 0 ? left : 0)+'px'});
+                        });
+                    }
+                }); 
+            })(jQuery);
+            
+            $(function() {
+                var BV = new $.BigVideo();
+                BV.init();
+                BV.show('http://vimeo.com/66202981/download?t=1372920744&v=164753190&s=924c55dd514f4de23c9354d6663bf03a', {ambient:true});
+                //$('.nav').hcenter();
+            });
+        </script>
 
+        <style>
+            @font-face {
+              font-family: "Kreon Light";
+              src: url(http://localhost:8000/font/Kreon-Light.ttf) format("truetype");
+            }
+            @font-face {
+              font-family: "Kreon Regular";
+              src: url(http://localhost:8000/font/Kreon-Regular.ttf) format("truetype");
+            }
+            @font-face {
+              font-family: "League Gothic";
+              src: url(http://localhost:8000/font/LeagueGothic-Regular.otf) format("opentype");
+            }
+
+
+            html, body {
+                margin:0;
+                padding:0;background:#000;
+                line-height:1;
+                font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+            }
+            
+            div.nav {
+                position: relative;
+                top: 0%;
+                background: white;
+                height: 30px;
+                padding: 75px 0 25px 100px;
+                margin: 0;
+            }
+            li.nav {
+                list-style: none;
+                display: inline;
+                padding-right: 50px;
+                font-size: 16px;
+                font-family: "Kreon Light", serif;
+            }
+            
+            .body {
+                position: relative;
+                top: 60px;
+                height: 415px;
+                background: white;
+                margin: 0;
+                padding: 50px 0 0 140px;
+            }
+
+            h1.bodytxt {
+                font-size: 60px;
+                font-family: "League Gothic", sans-serif;
+            }
+            
+            h2.bodytxt {
+                padding: 30px 0 0 0;
+                font-size: 55px;
+                font-family: "Kreon Regular", serif;
+            }
+            p.bodytxt {
+                padding: 80px 0 0 0;
+                font-size: 36px;
+                font-family: "Kreon Light", serif;
+            }
+            p.mailtxt{
+                padding: 160px 0 0 0;
+                font-size: 36px;
+                font-family: "Kreon Light", serif;
+            }
+
+            .footer{
+                position: relative;
+                top: 290px;
+                background: white;
+                height: 150px;
+                padding: 0;
+                margin: 0;
+            }
+            hr.footer {
+                width: 80%;
+                height: 5px;
+                color: red;
+            }
+
+            .wrapper {
+                position: relative;
+                top: 0px;
+                margin: 0;
+                margin: 0;
+                min-width:300px;
+                width: 100%;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="nav">
+                <ul>
+                    <li class="nav">Our Manifesto</li>
+                    <li class="nav">631 Oxford</li>
+                    <li class="nav">Partners</li>
+                    <li class="nav">FAQ</li>
+                    <li class="nav">Contact</li>
+                </ul>
+            </div>
+            
+            <div class="body">
+                <h1 class="bodytxt">CREATORS CO-OP IS _</h1>
+                <h2 class="bodytxt">run by students, for students.</h2>
+                <div class="row">
+                    <div class="span7">
+                        <p class="bodytxt">We are a live-in collaborative space for the highest potential entrepreneurs on campus.</p>
+                    </div>
+                    <div class="span5">
+                        <p class="mailtxt"><img src="/img/in.png" /></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+            </div>
+        </div>
+    </body>
 </html>

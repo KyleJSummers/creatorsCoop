@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Creators Co-op</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="http://dfcb.github.io/BigVideo.js/css/bigvideo.css" rel="stylesheet" />
+        <link href="/css/flat-ui.css" rel="stylesheet" />
+        
+        <!-- <script src="js/main.js"></script> -->
+        <script src="js/jquery-1.7.2.min.js"> </script>
+        <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+
+        <script>
+            (function($){
+                $.fn.extend({
+                    hcenter: function () {
+                        return this.each(function() {
+                            var left = ($(window).width() - $(this).outerWidth()) / 2;
+                            $(this).css({position:'absolute', margin:0, top: 0+'px', left: (left > 0 ? left : 0)+'px'});
+                        });
+                    }
+                }); 
+            })(jQuery);
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("a.doing").click(function() { 
+                    $(this).siblings(".activeImage").removeClass("activeImage");
+                    $(this).addClass("activeImage");
+                    document.getElementById("doing_text").style.display = "inline";
+                    $('#doing_text').siblings().css("display","none");
+                    $('.ourmanifesto').css("border-color","#ff3366");
+                });
+                $("a.meeting").click(function() { 
+                    $(this).siblings(".activeImage").removeClass("activeImage");
+                    $(this).addClass("activeImage");
+                    document.getElementById("meeting_text").style.display="inline";
+                    $('#meeting_text').siblings().css("display","none");
+                    $('.ourmanifesto').css("border-color","#00ffff");
+                });
+                $("a.learning").click(function() { 
+                    $(this).siblings(".activeImage").removeClass("activeImage");
+                    $(this).addClass("activeImage");
+                    document.getElementById("learning_text").style.display="inline";
+                    $('#learning_text').siblings().css("display","none");
+                    $('.ourmanifesto').css("border-color","#99cc33");
+                });
+                $("a.showing").click(function() { 
+                    $(this).siblings(".activeImage").removeClass("activeImage");
+                    $(this).addClass("activeImage");
+                    document.getElementById("showing_text").style.display="inline";
+                    $('#showing_text').siblings().css("display","none");
+                    $('.ourmanifesto').css("border-color","#ff3333");
+                });
+
+            });
+        </script>
+
+        <style>
+            @font-face {
+              font-family: "Kreon Light";
+              src: url(http://localhost:8000/font/Kreon-Light.ttf) format("truetype");
+            }
+            @font-face {
+              font-family: "Kreon Regular";
+              src: url(http://localhost:8000/font/Kreon-Regular.ttf) format("truetype");
+            }
+            @font-face {
+              font-family: "League Gothic";
+              src: url(http://localhost:8000/font/LeagueGothic-Regular.otf) format("opentype");
+            }
+
+
+            html, body {
+                margin:0;
+                padding:0;
+                background:#FFF;
+                line-height:1;
+                font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+            }
+            a, a:visited{
+                color: black;
+                text-decoration: none;
+            }
+            a:hover {
+                color: black;
+                text-decoration: underline;
+            }
+            
+            div.nav {
+                position: relative;
+                top: 0%;
+                background: white;
+                height: 30px;
+                padding: 75px 0 25px 100px;
+                margin: 0;
+            }
+            li.nav {
+                list-style: none;
+                display: inline;
+                padding-right: 50px;
+                font-size: 16px;
+                font-family: "Kreon Light", serif;
+                color: black;
+            }
+            
+            .body {
+                position: relative;
+                top: 60px;
+                height: 415px;
+                background: white;
+                margin: 0;
+                padding: 50px 0 0 140px;
+                color: black;
+            }
+
+            h1.bodytxt {
+                font-size: 60px;
+                font-family: "League Gothic", sans-serif;
+            }
+            
+            h2.bodytxt {
+                padding: 30px 0 0 0;
+                font-size: 55px;
+                font-family: "Kreon Regular", serif;
+            }
+            p.bodytxt {
+                padding: 80px 0 0 0;
+                font-size: 36px;
+                font-family: "Kreon Light", serif;
+            }
+            .mailtxt {
+                padding: 130px 0 0 0;
+                font-size: 36px;
+                font-family: "Kreon Light", serif;
+                width: 150px;
+            }
+            a.mailtxt {
+                color: white;
+            }
+
+            .footer{
+                position: relative;
+                top: 290px;
+                background: white;
+                height: 150px;
+                padding: 0;
+                margin: 0;
+            }
+            hr.footer {
+                width: 80%;
+                height: 5px;
+                color: red;
+            }
+
+            .wrapper {
+                position: relative;
+                top: 0px;
+                margin: 0;
+                margin: 0;
+                min-width:300px;
+                width: 100%;
+            }
+
+            #interactive_underscore {
+                color: #00FFFF;
+                color: #00FF33;
+                color: #6600FF;
+                color: #ED1E79;
+            }
+
+            hr.line {
+                color: black;
+            }
+
+            .banner {
+                margin: auto;
+                width: 95%;
+                min-width: 940px;
+            }
+            .banner img {
+                width: 100%;
+            }
+
+            .body_manifesto {
+                background: white;
+                font-family: "Kreon Light", serif;
+                font-size: 20px;
+            }
+
+            .content {
+                margin: auto;
+                margin-top: 100px;
+                width: 65%;
+                height: 1200px;
+                min-width: 940px;
+            }
+
+            .now {
+                height: 500px;
+            }
+
+            .now .text {
+                float: left;
+                width: 430px;
+            }
+
+            .now .photos {
+                float: right;
+                width: 430px;
+            }
+
+            .eachday .text {
+
+            }
+
+            .pillars {
+                height: 202px;
+            }
+
+            .pillars a {
+                float: left;
+                display: inline;
+            }
+
+            a.doing, a.meeting, a.learning, a.showing {
+                width: 229px;
+                height: 202px;
+            }
+
+            a.doing {
+                margin-right: 8px;
+                background: url(http://localhost:8000/img/manifesto/spr_doing.png) 0 0;
+            }
+            a.doing:hover, a.doing.activeImage {
+                background-position: -229px 0;
+            }
+
+            a.meeting {
+                margin-right: 8px;
+                background: url(http://localhost:8000/img/manifesto/spr_meeting.png) 0 0;
+            }
+            a.meeting:hover, a.meeting.activeImage {
+                background-position: -229px 0;
+            }
+
+            a.learning {
+                margin-right: 8px;
+                background: url(http://localhost:8000/img/manifesto/spr_learning.png) 0 0;
+            }
+            a.learning:hover, a.learning.activeImage {
+                background-position: -229px 0;
+            }
+
+            a.showing {
+                background: url(http://localhost:8000/img/manifesto/spr_showing.png) 0 0;
+            }
+            a.showing:hover, a.showing.activeImage {
+                background-position: -229px 0;
+            }
+
+            .ourmanifesto {
+                margin-top: 20px;
+                padding-left: 16px;
+                width: 572px;
+                border-left: solid;
+                border-width: 4px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="nav">
+                <ul>
+                    <li class="nav"><a href="http://localhost:8000/manifesto.html">Our Manifesto</a></li>
+                    <li class="nav"><a href="http://facebook.com">631 Oxford</a></li>
+                    <li class="nav"><a href="#">Partners</a></li>
+                    <li class="nav"><a href="#">FAQ</a></li>
+                    <li class="nav"><a href="#">Contact</a></li>
+                    <li class="nav"><hr class="line"></li>
+                </ul>
+            </div>
+            
+            <div class="body_manifesto">
+                    <div class="banner"><img src="/img/manifesto/top-banner-photo_manifesto.png"/></div>
+                    <div class="content">
+                            <div class="now">
+                                    <div class="text">
+                                          NOW this is a story all about how Michigan life got turned upside down... </br> </br>
+                                          We are a student-led initiative to create a live-in collaborative space for the highest potential entrepreneurs on campus. Creators Co-op provides a playground for busy builders and thinkers with an itch to take action. We are a collaborative space for students, by students. We exist first and foremost to help grow our people, not solely companies or ideas. </br> </br>
+                                          We are not an accelerator, an incubator, or simply a workspace. We're a space for the highest potential entrepreneurs to brainstorm, to whiteboard, to meet likeminded doers, to finally ship that project you've been working on. Here, we're in the business of becoming better selves, of bringing ideas, experiments, and thinkers together to collide and create.   
+                                    </div>
+                                    <img class="photos" src="/img/manifesto/square-tri-photo_manifesto.png"/> 
+                            </div>
+                            <div class="eachday">
+                                    <div class="text">
+                                          Creators Co-op opens its doors to activities and guests supporting our four fundamental pillars of experiential education and experiences. </br> </br>
+                                    </div>
+                                    <div class="pillars">
+                                        <a class="doing"></a>
+                                        <a class="meeting"></a>
+                                        <a class="learning"></a>
+                                        <a class="showing"></a>
+                                    </div>
+                                    <div class="ourmanifesto">
+                                        <div id="doing_text" style="display: none;">
+                                            Members accepted to the Creators Co-op Fellowship receive unlimited daily access to the workplace at 631 Oxford. Fellows experience the full extensive phsyical capabilities offered by the workspace and open library exchange, with ongoing access to the latest tools for startup success and real-world happenings. 
+                                        </div>
+                                        <div id="meeting_text" style="display: none;">
+                                            Community socials occur regularly, including Monday Night Member Dinners, Friday afternoon meetup + drinkups, regular launch parties for new product releases of local startups, exclusive dinners with special guests and top recruiters, and student project progress shares. In addition, we explore other groups -- both on-campus and off. Creators Co-op Fellows receive a free ticket to each event, and non-members are always more than welcome, pending space and attendance. 
+                                        </div>
+                                        <div id="learning_text" style="display: none;">
+                                            Working and panel debates are led each month by experts in the community. Each session covers a different topic with multiple tracks for attendees for as comprehensive of a learning experience as possible. These topics include skills useful both inside and out of the classroom, such as new technology frameworks or programming languages, lettering and typeface design, web and mobile design, crafting a pitch deck, and much more. 
+                                        </div>
+                                        <div id="showing_text" style="display: none;">
+                                            Show and tell is a big part of the Creators Co-op community culture. Each quarter, we bring opportunities for members to come together and showcase their projects and learnings through skillbuilding events such as hackathons, barcamps, and Startup Weekends. Annually, we host a summit bringing Michigan alumni, Fellows, and our Family communities together to share their knowledge. The summit includes "stand-up" sessions allowing for Fellow project demos with live feedback right onstage. 
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+
+            </div>
+
+
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Our Manifesto</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="css/flat-ui.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet"/>
+        
+        <!-- <script src="js/main.js"></script> -->
+        <script src="js/jquery-1.7.2.min.js"> </script>
+        <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("a.doing").click(function() { 
+                    $(this).siblings(".activeImage").removeClass("activeImage");
+                    $(this).addClass("activeImage");
+                    document.getElementById("doing_text").style.display = "inline";
+                    $('#doing_text').siblings().css("display","none");
+                    $('.ourmanifesto').css("border-color","#ff3366");
+                    $('.ask li').css("background-color","#ff3366");
+                });
+                $("a.meeting").click(function() { 
+                    $(this).siblings(".activeImage").removeClass("activeImage");
+                    $(this).addClass("activeImage");
+                    document.getElementById("meeting_text").style.display="inline";
+                    $('#meeting_text').siblings().css("display","none");
+                    $('.ourmanifesto').css("border-color","#00ffff");
+                    $('.ask li').css("background-color","#00ffff");
+                });
+                $("a.learning").click(function() { 
+                    $(this).siblings(".activeImage").removeClass("activeImage");
+                    $(this).addClass("activeImage");
+                    document.getElementById("learning_text").style.display="inline";
+                    $('#learning_text').siblings().css("display","none");
+                    $('.ourmanifesto').css("border-color","#99cc33");
+                    $('.ask li').css("background-color","#99cc33");
+                });
+                $("a.showing").click(function() { 
+                    $(this).siblings(".activeImage").removeClass("activeImage");
+                    $(this).addClass("activeImage");
+                    document.getElementById("showing_text").style.display="inline";
+                    $('#showing_text').siblings().css("display","none");
+                    $('.ourmanifesto').css("border-color","#ff3333");
+                    $('.ask li').css("background-color","#ff3333");
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="nav">
+                <ul>
+                    <li class="nav manifesto active"><a href="">Our Manifesto</a></li>
+                    <li class="nav oxford"><a href="oxford.html">631 Oxford</a></li>
+                    <!--<li class="nav partners"><a href="">Partners</a></li>-->
+                    <li class="nav faq"><a href="faq.html">FAQ</a></li>
+                    <li class="nav contact"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="body_manifesto">
+                <div class="banner"><img src="img/manifesto/manifesto.png"/></div>
+                <div class="content">
+                    <div class="now">
+                        <div class="text">
+                              <img src="img/manifesto/now.png"/>
+                              this is a story all about how Michigan life got turned upside down... </br></br></br></br>
+                              We are a student-led initiative to create a live-in collaborative space for the highest potential entrepreneurs on campus. Creators Co-op provides a playground for busy builders and thinkers with an itch to take action. We are a collaborative space for students, by students. We exist first and foremost to help grow our people, not solely companies or ideas. </br></br>
+                              We are not an accelerator, an incubator, or simply a workspace. We're a space for the highest potential entrepreneurs to brainstorm, to whiteboard, to meet likeminded doers, to finally ship that project you've been working on. Here, we're in the business of becoming better selves, of bringing ideas, experiments, and thinkers together to collide and create.   
+                        </div>
+                        <img class="photos" src="img/manifesto/tri_manifesto.png"/> 
+                    </div>
+                    <div class="eachday">
+                        <div class="text">
+                              <img src="img/manifesto/eachday.png"/>
+                              Creators Co-op opens its doors to activities and guests supporting our four fundamental pillars of experiential education and experiences. </br></br></br></br>
+                        </div>
+                        <div class="pillars">
+                            <a class="doing"></a>
+                            <a class="meeting"></a>
+                            <a class="learning"></a>
+                            <a class="showing"></a>
+                        </div>
+                        <div class="ourmanifesto">
+                            <div id="doing_text" style="display: none;">
+                                <div class="text">
+                                    Members accepted to the Creators Co-op Fellowship receive unlimited daily access to the workplace at 631 Oxford. Fellows experience the full extensive phsyical capabilities offered by the workspace and open library exchange, with ongoing access to the latest tools for startup success and real-world happenings. 
+                                </div>
+                                <div class="ask"><ul>
+                                    <li>How do I become a fellow?</li></br></br>
+                                    <li>What is 631 Oxford?</li></br></br>
+                                    <li>What is the workplace like?</li></br></br></ul>
+                                </div>
+                            </div>
+                            <div id="meeting_text" style="display: none;">
+                                <div class="text">
+                                    Community socials occur regularly, including Monday Night Member Dinners, Friday afternoon meetup + drinkups, regular launch parties for new product releases of local startups, exclusive dinners with special guests and top recruiters, and student project progress shares. In addition, we explore other groups -- both on-campus and off. Creators Co-op Fellows receive a free ticket to each event, and non-members are always more than welcome, pending space and attendance. 
+                                </div>
+                                <div class="ask"><ul>
+                                    <li>How can I stay informed?</li></br></br>
+                                    <li>I'm not a student.</br>Can I still be involved?</li></br></br></ul>
+                                </div>
+                            </div>
+                            <div id="learning_text" style="display: none;">
+                                <div class="text">
+                                    Working and panel debates are led each month by experts in the community. Each session covers a different topic with multiple tracks for attendees for as comprehensive of a learning experience as possible. These topics include skills useful both inside and out of the classroom, such as new technology frameworks or programming languages, lettering and typeface design, web and mobile design, crafting a pitch deck, and much more. 
+                                </div>
+                                <div class="ask"><ul>
+                                    <li>Are workshops open to the public?</li></br></br>
+                                    <li>Can I make a topic request?</li></br></br></ul>
+                                </div>
+                            </div>
+                            <div id="showing_text" style="display: none;">
+                                <div class="text">
+                                    Show and tell is a big part of the Creators Co-op community culture. Each quarter, we bring opportunities for members to come together and showcase their projects and learnings through skillbuilding events such as hackathons, barcamps, and Startup Weekends. Annually, we host a summit bringing Michigan alumni, Fellows, and our Family communities together to share their knowledge. The summit includes "stand-up" sessions allowing for Fellow project demos with live feedback right onstage. 
+                                </div>
+                                <div class="ask"><ul>
+                                    <li>What is the Family community?</li></br></br>
+                                    <li>I'm organizing an awesome event.</br>Are there ways we can collaborate?</li></br></br></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

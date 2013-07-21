@@ -152,7 +152,7 @@ hr.line {
     width: 100%;
 }
 
-.body_manifesto {
+.body_manifesto, .body_oxford, .body_faq, .body_contact {
     background: white;
     font-family: "Kreon Light", serif;
     font-size: 20px;
@@ -247,14 +247,23 @@ a.learning.activeImage, a.showing:hover, a.showing.activeImage {
 
 /* ----------------------------- End Our Manifesto ----------------------------- */
 
-
 /* -------------------------------- 631 Oxford -------------------------------- */
 
 
-.body_oxford {
-    background: white;
-    font-family: "Kreon Light", serif;
-    font-size: 20px;
-}
+
 
 /* ------------------------------ End 631 Oxford ------------------------------ */
+
+/* ------------------------------------ FAQ ------------------------------------ */
+
+
+
+
+/* ---------------------------------- End FAQ ---------------------------------- */
+
+/* ---------------------------------- Contact ---------------------------------- */
+
+
+
+
+/* --------------------------------- End Contact ------------------------------- */
